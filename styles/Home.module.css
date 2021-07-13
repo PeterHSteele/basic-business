@@ -5,11 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -56,8 +55,12 @@
 }
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  color: #789;
+  margin: 1rem 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .code {
@@ -70,47 +73,75 @@
 }
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px 100px;
+  max-width: 1000px;
+  margin-top:5em;
 }
 
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.product{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.information{
+  font-size: 16px;
+}
+
+.information h2{
+  font-size: 1.4em;
+  margin: .42em 0 .63em
+}
+
+.information a:hover,
+.information a:focus{
+  text-decoration: underline;
+}
+
+.featureProduct{
+  grid-column: 1/4;
+  grid-row: 1/5;
+  
+}
+
+.featureImageWrapper{
+  grid-row: 1/4;
+  position: relative;
+}
+
+.featureImageWrapper img,
+.secondaryProductImageWrapper img{
+  object-fit: cover;
+}
+
+.secondaryProduct{
+  grid-column: 4/6;
+}
+
+.secondaryProductImageWrapper{
+  grid-row: 1;
+}
+
+.secondaryProductImageWrapper *{
+  max-height: 100%;
+}
+
+#secondProduct{
+  
+}
+
+#thirdProduct{
+  
+}
+
+.entryContent{
+  color: #262626;
 }
 
 @media (max-width: 600px) {

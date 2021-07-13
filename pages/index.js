@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import backpack1 from '../public/images/backpack.jpg';
+import backpack2 from '../public/images/another-bag.jpg';
+import backpack3 from '../public/images/hiking-bag.jpg';;
 
 export default function Home() {
   return (
@@ -12,43 +16,73 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <h1 className={styles.title}>Welcome To Detour</h1>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          
+          <article className={`${styles.featureProduct} ${styles.product}`}>
+            <div className={styles.featureImageWrapper}>
+              <Image
+                src={backpack1}
+                alt="backpack"
+                layout="fill"
+              />
+            </div>
+            <div className={styles.information}>
+              <header>
+                <h2>Our Coolest Product</h2>
+              </header>
+              <div className={`${styles.entryContent} ${styles.featureContent}`}>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+              <Link href="/">
+                <a>Learn More</a>
+              </Link>
+            </div>
+          </article>
+          
+          <article id={styles.secondProduct} className={`${styles.secondaryProduct} ${styles.product}`}>
+            <div className={styles.secondaryProductImageWrapper}>
+              <Image
+                src={backpack2}
+                alt="stylish backpack"
+              />
+            </div>
+            <div className={styles.information}>
+              <header>
+                <h2>Another Cool Product</h2>
+              </header>
+              <div className={styles.entryContent}>
+                <p>Vivamus at elementum mi, phasellus dignissim enim dolor</p>
+              </div>
+              <Link href="/">
+                <a>Learn More</a>
+              </Link>
+            </div>
+          </article>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <article id={styles.thirdProduct} className={`${styles.secondaryProduct} ${styles.product}`}>
+            <div className={styles.secondaryProductImageWrapper}>
+              <Image
+                src={backpack3}
+                alt="functional backpack"
+              />
+            </div>
+            <div className={styles.information}>
+              <header>
+                <h2>A Third Cool Product</h2>
+              </header>
+              <div className={styles.entryContent}>
+                <p>Curabitur ultricies dolor vel libero.</p>
+              </div>
+              <Link href="/">
+                <a>Learn More</a>
+              </Link>
+            </div>
+          </article>
+          
         </div>
       </main>
 
