@@ -10,7 +10,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  color: #7053bf
+  color: #0070f3;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 * {
